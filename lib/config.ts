@@ -89,7 +89,7 @@ export const projects = [
     description:
       "Full-stack AI recipe generator using Meta's Llama 3.3 model via Groq API. Users input ingredients and receive AI-generated recipes with fast response times and clean UI.",
     tech: ["React", "Node.js", "Groq API", "Llama 3.3", "Vercel", "Render"],
-    github: "https://github.com/akramguroo-dev/smart-chef",
+    github: "https://github.com/akramguroo-dev/smart-chef-react-app",
     live: "https://smart-chef-react-app.vercel.app",
     backend: "https://smart-chef-backend.onrender.com",
     highlights: [
