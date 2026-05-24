@@ -54,6 +54,7 @@ export const projects = [
   {
     id: 1,
     title: "HirePath",
+    featured: true,
     tagline: "Full-Stack Internship & Job Portal (v1 Live, v2 In Development)",
     description:
       "A production-ready MERN internship and job portal with 50+ features including role-based authentication, Cloudinary uploads, real-time application tracking, and automated job closing on deadlines. Built with a 2-person team using MVP-iterative software development.",
@@ -83,6 +84,7 @@ export const projects = [
   {
     id: 2,
     title: "Smart Chef 🍳",
+    featured: true,
     tagline: "AI-Powered Recipe Generator",
     description:
       "Full-stack AI recipe generator using Meta's Llama 3.3 model via Groq API. Users input ingredients and receive AI-generated recipes with fast response times and clean UI.",

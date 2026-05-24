@@ -104,7 +104,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Featured Projects</h2>
 
           <div className="space-y-12">
-            {projects.map((project, index) => (
+            {projects.filter(p => p.featured).map((project, index) => (
               <div
                 key={project.id}
                 className={`border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow ${
