@@ -41,18 +41,20 @@ export default function ProjectCard({
         {/* Description */}
         <p className="text-lg text-gray-700 mb-6">{description}</p>
 
-        {/* Key Highlights */}
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            {highlights.map((highlight) => (
-              <li key={highlight} className="flex items-start gap-2 text-gray-700">
-                <span className="text-blue-600 font-bold mt-1">✓</span>
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Key Highlights (only if present) */}
+        {highlights.length > 0 && (
+          <div className="mb-6">
+            <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {highlights.map((highlight) => (
+                <li key={highlight} className="flex items-start gap-2 text-gray-700">
+                  <span className="text-blue-600 font-bold mt-1">✓</span>
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Metrics (if provided) */}
         {metrics && (

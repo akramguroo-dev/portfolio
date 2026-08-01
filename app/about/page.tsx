@@ -1,8 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import { siteConfig, techStack } from "@/lib/config";
-import { Award, Briefcase, Book, Target, ArrowRight } from "lucide-react";
+import { siteConfig, techStack, certifications } from "@/lib/config";
+import { Award, Briefcase, Book, Target, ArrowRight, BadgeCheck } from "lucide-react";
 
 export default function AboutPage() {
   const experiences = [
@@ -11,8 +11,8 @@ export default function AboutPage() {
       type: "course",
       title: "Frontend Fundamentals",
       company: "SuperSimpleDev",
-      period: "April 2025",
-      duration: "2 months",
+      period: "December 2024 - January 2025",
+      duration: "~2 months",
       description:
         "Mastered the fundamentals of web development with HTML5, CSS3, and JavaScript. Built 5 practical projects including YouTube Clone, Calculator, Rock Paper Scissors Game, To-Do List, and Amazon Clone.",
       skills: ["HTML5", "CSS3", "JavaScript", "Git", "GitHub"],
@@ -23,10 +23,10 @@ export default function AboutPage() {
       type: "course",
       title: "React Development",
       company: "freeCodeCamp",
-      period: "May 2025",
-      duration: "1-2 months",
+      period: "May - July 2025",
+      duration: "~2 months",
       description:
-        "Deep dive into React fundamentals and advanced concepts. Built multiple production-ready projects including Smart Chef (AI-powered recipe generator) and Meme Generator app.",
+        "Deep dive into React fundamentals and advanced concepts. Built multiple production-ready projects including Smart Chef (AI-powered recipe generator) and a Meme Generator app.",
       skills: ["React", "Hooks", "State Management", "Component Design"],
       icon: "⚛️",
     },
@@ -35,10 +35,10 @@ export default function AboutPage() {
       type: "internship",
       title: "Full Stack Developer Internship",
       company: "Null Classes (EdTech)",
-      period: "September 2025 - December 2025",
-      duration: "3+ months",
+      period: "August 2025 - September 2025",
+      duration: "1 month",
       description:
-        "Developed a complete MERN stack internship/job portal. Gained hands-on experience in full-stack development, API design, and database management. This project led to an internship offer.",
+        "Completed a paid project-based assessment building a MERN-stack internship/job portal, which led to a formal internship offer. Gained hands-on experience in REST API design, MongoDB schema design, and full-stack feature development. This project's concept directly inspired the design of HirePath.",
       skills: ["MERN Stack", "MongoDB", "Express", "React", "Node.js"],
       icon: "💼",
     },
@@ -47,12 +47,13 @@ export default function AboutPage() {
       type: "project",
       title: "HirePath - Lead Full Stack Developer",
       company: "Final Year Project",
-      period: "March 2026 - Ongoing",
-      duration: "Ongoing",
+      period: "March 2026 - Present",
+      duration: "v1 & v2 Live",
       description:
-        "Leading a 2-person team to build a production-ready MERN job portal. Architected the entire system, developed 50+ backend endpoints, implemented security features (JWT, role-based access), integrated Cloudinary for file uploads, managed deployment, and mentored team members.",
+        "Led a 3-person team to build a production MERN job portal. Architected the entire system, developed 50+ backend endpoints, implemented security features (JWT, role-based access), integrated Cloudinary for file uploads, and shipped a real-time messaging system (v2) using JWT-authenticated Socket.io — supporting live delivery, typing indicators, and read receipts.",
       skills: [
         "MERN Stack",
+        "Socket.io",
         "Architecture Design",
         "Team Leadership",
         "DevOps",
@@ -64,20 +65,22 @@ export default function AboutPage() {
 
   const achievements = [
     {
-      title: "First Position - Final Year Project",
-      description: "Ranked #1 in final year MERN project among all students",
-      icon: Award,
+      title: "Real-Time Messaging System",
+      description:
+        "Independently designed and shipped a production Socket.io messaging system with JWT-authenticated WebSockets, typing indicators, and read receipts.",
+      icon: Target,
     },
     {
-      title: "100 LeetCode Problems",
-      description: "Solved almost 100 DSA problems (started March 2026)",
-      icon: Target,
+      title: "Internship Offer Earned",
+      description:
+        "Converted a paid technical assessment into a formal Full-Stack Developer internship offer at Null Classes.",
+      icon: Briefcase,
     },
     {
       title: "Backend Security Mastery",
       description:
-        "Overcame the challenge of implementing JWT, role-based access control, and secure APIs",
-      icon: Briefcase,
+        "Implemented JWT authentication, role-based access control, and secure, production-hardened APIs.",
+      icon: Award,
     },
   ];
 
@@ -91,11 +94,9 @@ export default function AboutPage() {
           </h1>
           <div className="space-y-4 text-lg text-gray-700">
             <p>
-              I'm a passionate full-stack developer currently in my final year at{" "}
-              <span className="font-semibold">{siteConfig.about.college}</span>,
-              graduating in {siteConfig.graduation.month}{" "}
-              {siteConfig.graduation.year}. My journey into tech started with
-              curiosity about how systems work, and it has evolved into a deep
+              I'm a full-stack developer who recently completed my degree at{" "}
+              <span className="font-semibold">{siteConfig.about.college}</span>.
+              My journey into tech started with curiosity about how systems work, and it has evolved into a deep
               passion for solving real-world problems through clean, scalable
               code.
             </p>
@@ -129,16 +130,15 @@ export default function AboutPage() {
                 {siteConfig.about.naacGrade})
               </p>
               <p className="text-gray-600 mt-2">
-                Graduating: {siteConfig.graduation.month}{" "}
-                {siteConfig.graduation.year}
+                2022 – 2026 · Final semester completed, degree conferral pending
               </p>
               <p className="text-gray-600 mt-2">
                 <span className="font-semibold">Core Subjects:</span> Data
-                Structures, Algorithms, DBMS, Operating Systems, Computer
-                Networks, Software Engineering, Python, OOP (Java, C++)
+                Structures & Algorithms, Object-Oriented Programming (Java, C++), DBMS (SQL), Operating Systems, Computer
+                Networks, Software Engineering, Algorithm Analysis & Design, Python Programming
               </p>
               <p className="text-gray-600 mt-2">
-                <span className="font-semibold">Electives & Open Courses:</span> Data
+                <span className="font-semibold">Electives & Open Courses:</span> Artificial Intelligence & Machine Learning, Data
                 Mining, IoT, E-commerce & Cyber Laws, Data Science,
                 Entrepreneurship Development, Wireless & Mobile Communication
               </p>
@@ -204,7 +204,8 @@ export default function AboutPage() {
             <p>
               HirePath is more than just a final-year project — it's my demonstration of full-stack 
               mastery and leadership. Starting in March 2026, I architected a complete MERN job portal 
-              from scratch, handling not just coding but team leadership, system design, and deployment.
+              from scratch, leading a 3-person team through coding, system design, and deployment — then 
+              went on to independently design and ship a real-time messaging system (v2) using Socket.io.
             </p>
 
             <div className="bg-white rounded-lg p-6 mt-4">
@@ -214,19 +215,25 @@ export default function AboutPage() {
                 role-based access control (Student/Employer), protected APIs, and secure file uploads with Cloudinary. 
                 These real-world security challenges taught me how to build applications that protect user data.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 mb-4">
                 <span className="font-semibold">System Architecture:</span> Designing scalable APIs, implementing 
                 pagination, filtering, search functionality, and cron jobs for automated job closing. This deepened my 
                 understanding of production-grade system design.
+              </p>
+              <p className="text-gray-700">
+                <span className="font-semibold">Real-Time Systems:</span> Building a JWT-authenticated Socket.io 
+                messaging layer from scratch — including live delivery, typing indicators, and read receipts — and 
+                debugging genuinely tricky production issues along the way (WebSocket auth payload mismatches, 
+                MongoDB ObjectId comparison bugs, deployment configuration errors).
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-6 mt-4">
               <p className="font-semibold text-gray-900 mb-3">My Role & Impact:</p>
               <ul className="space-y-2 text-gray-700">
-                <li>✓ <span className="font-semibold">Lead Full Stack Developer:</span> Architected entire system</li>
+                <li>✓ <span className="font-semibold">Lead Full Stack Developer:</span> Architected the entire system</li>
                 <li>✓ <span className="font-semibold">Backend Specialist:</span> Developed 50+ REST API endpoints</li>
-                <li>✓ <span className="font-semibold">Team Leader:</span> Mentored 1 frontend developer</li>
+                <li>✓ <span className="font-semibold">Team Leader:</span> Led a 3-person team, mentoring 2 teammates in frontend UI work</li>
                 <li>✓ <span className="font-semibold">DevOps Engineer:</span> Deployed to Vercel (frontend) & Render (backend)</li>
                 <li>✓ <span className="font-semibold">Documentation:</span> Maintained comprehensive code documentation</li>
                 <li>✓ <span className="font-semibold">Issue Management:</span> Assigned and tracked team tasks</li>
@@ -258,6 +265,31 @@ export default function AboutPage() {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section className="bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+            <BadgeCheck size={28} className="text-blue-600" />
+            Certifications
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {certifications.map((cert) => (
+              <div
+                key={cert.title}
+                className="border border-gray-200 rounded-lg p-5"
+              >
+                <h3 className="font-bold text-gray-900">{cert.title}</h3>
+                <p className="text-gray-600 text-sm mt-1">
+                  {cert.issuer} · {cert.date}
+                </p>
+                {cert.note && (
+                  <p className="text-gray-500 text-xs mt-1">{cert.note}</p>
+                )}
+              </div>
+            ))}
           </div>
         </section>
 
@@ -293,14 +325,13 @@ export default function AboutPage() {
           <div className="space-y-4 text-lg">
             <p>
               <span className="font-bold">🎯 Problem Solver:</span> {" "}
-              {siteConfig.leetcode.status === "In Progress" && (
-                <>I'm actively solving DSA problems on LeetCode (almost 100 solved) to strengthen my 
-                algorithmic thinking and technical interview skills.</>
-              )}
+              I'm building my algorithmic foundations in C++ (STL, core DSA) to strengthen my 
+              problem-solving skills for technical interviews.
             </p>
             <p>
               <span className="font-bold">👥 Team Leader:</span> I don't just code — I mentor, architect, and 
-              inspire. I've led my HirePath team through complex challenges and shipped production code.
+              inspire. I led a 3-person team through HirePath's development and shipped production code, 
+              including a real-time messaging system built independently after the initial team build.
             </p>
             <p>
               <span className="font-bold">🔒 Security-Conscious:</span> I understand the importance of secure, 
@@ -308,8 +339,7 @@ export default function AboutPage() {
             </p>
             <p>
               <span className="font-bold">🚀 Growth Mindset:</span> {" "}
-              {siteConfig.graduation.status}: I'm constantly learning, 
-              building, and pushing myself to master new technologies and tackle harder problems.
+              I'm constantly learning, building, and pushing myself to master new technologies and tackle harder problems.
             </p>
           </div>
         </section>
@@ -323,10 +353,10 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-gray-700 text-lg">
             <p>
-              Right now, I'm focused on two things: <span className="font-semibold">completing HirePath</span> with 
-              all v2 features (real-time messaging, college integration) and{" "}
-              <span className="font-semibold">securing my first internship/junior developer role</span> to apply my 
-              skills in a professional environment.
+              Right now, I'm focused on <span className="font-semibold">securing my first internship or junior 
+              developer role</span> to apply my skills in a professional environment, while continuing to build 
+              out HirePath's remaining feature backlog (employer profiles, job management, forgot-password flow) 
+              as an ongoing hobby project.
             </p>
             <p>
               My vision is to become a <span className="font-semibold">senior full-stack engineer</span> who can 

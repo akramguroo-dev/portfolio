@@ -43,7 +43,7 @@ export default function Home() {
 
           <div className="space-y-6 text-lg text-gray-700">
             <p>
-              I'm a BTech student at <span className="font-semibold">{siteConfig.about.college}</span> ({siteConfig.about.university} - NIRF Rank {siteConfig.about.nifrRank}, NAAC {siteConfig.about.naacGrade} accredited), {siteConfig.graduation.status.toLowerCase()} in {siteConfig.graduation.month} {siteConfig.graduation.year}. 
+              I completed my BTech at <span className="font-semibold">{siteConfig.about.college}</span> ({siteConfig.about.university} - NIRF Rank {siteConfig.about.nifrRank}, NAAC {siteConfig.about.naacGrade} accredited) in {siteConfig.graduation.month} {siteConfig.graduation.year}. 
               Over the past year, I've been working on full-stack projects that solve real business problems, from job portals to AI-powered applications.
             </p>
 
@@ -53,13 +53,14 @@ export default function Home() {
             </p>
 
             <p>
-              I lead by example. I've mentored and led a team of two developers on the HirePath project, guiding them through the development process, 
-              architecting the full-stack solution, and handling core backend work. We followed an <span className="font-semibold">MVP-iterative model</span>, shipping features incrementally and improving based on feedback.
+              I lead by example. I led and mentored a <span className="font-semibold">3-person team</span> on the HirePath project, guiding two teammates through the development process, 
+              architecting the full-stack solution, and handling core backend work. We followed an <span className="font-semibold">MVP-iterative model</span>, shipping features incrementally and improving based on feedback. 
+              I later independently designed and shipped HirePath's real-time messaging system (v2).
             </p>
 
             <p>
-              I'm actively solving DSA problems (targeting {siteConfig.leetcode.target}+ on LeetCode) to strengthen my problem-solving skills and prepare for technical interviews. 
-              My goal is to secure a junior developer role or internship this semester, with the vision to grow into a senior full-stack engineer.
+              I'm building my algorithmic foundations in C++ (targeting {siteConfig.leetcode.target}+ problems on LeetCode) to strengthen my problem-solving skills and prepare for technical interviews. 
+              My goal is to secure a junior developer role or internship, with the vision to grow into a senior full-stack engineer.
             </p>
           </div>
 
@@ -67,7 +68,7 @@ export default function Home() {
           <div className="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6">
             <p className="text-gray-700">
               <span className="font-semibold">Education:</span> BTech Computer Science & Engineering, {siteConfig.about.college}, 
-              {siteConfig.about.university} (NIRF Rank {siteConfig.about.nifrRank}, NAAC Grade {siteConfig.about.naacGrade}). {siteConfig.graduation.status}: {siteConfig.graduation.month} {siteConfig.graduation.year}.
+              {siteConfig.about.university} (NIRF Rank {siteConfig.about.nifrRank}, NAAC Grade {siteConfig.about.naacGrade}). {siteConfig.graduation.status}: {siteConfig.graduation.month} {siteConfig.graduation.year} (degree conferral pending).
             </p>
           </div>
         </div>
@@ -120,17 +121,19 @@ export default function Home() {
                   <p className="text-lg text-gray-700 mb-6">{project.description}</p>
 
                   {/* Key Highlights */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {project.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2 text-gray-700">
-                          <span className="text-blue-600 font-bold mt-1">✓</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {project.highlights.length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        {project.highlights.map((highlight) => (
+                          <li key={highlight} className="flex items-start gap-2 text-gray-700">
+                            <span className="text-blue-600 font-bold mt-1">✓</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {/* Metrics (if available) */}
                   {project.metrics && (
