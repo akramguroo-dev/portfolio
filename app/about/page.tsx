@@ -31,26 +31,14 @@ export default function AboutPage() {
       icon: "⚛️",
     },
     {
-      id: 3,
-      type: "internship",
-      title: "Full Stack Developer Internship",
-      company: "Null Classes (EdTech)",
-      period: "August 2025 - September 2025",
-      duration: "1 month",
-      description:
-        "Completed a paid project-based assessment building a MERN-stack internship/job portal, which led to a formal internship offer. Gained hands-on experience in REST API design, MongoDB schema design, and full-stack feature development. This project's concept directly inspired the design of HirePath.",
-      skills: ["MERN Stack", "MongoDB", "Express", "React", "Node.js"],
-      icon: "💼",
-    },
-    {
       id: 4,
       type: "project",
-      title: "HirePath - Lead Full Stack Developer",
+      title: "HirePath - Full-Stack Developer Lead",
       company: "Final Year Project",
       period: "March 2026 - Present",
       duration: "v1 & v2 Live",
       description:
-        "Led a 3-person team to build a production MERN job portal. Architected the entire system, developed 50+ backend endpoints, implemented security features (JWT, role-based access), integrated Cloudinary for file uploads, and shipped a real-time messaging system (v2) using JWT-authenticated Socket.io — supporting live delivery, typing indicators, and read receipts.",
+        "Led a 3-person team to build a production MERN job portal. Architected and built approximately 95% of the system myself; teammates built the frontend UI pages, developed 50+ backend endpoints, implemented security features (JWT, role-based access), integrated Cloudinary for file uploads, and shipped a real-time messaging system (v2) using JWT-authenticated Socket.io — supporting live delivery, typing indicators, and read receipts.",
       skills: [
         "MERN Stack",
         "Socket.io",
@@ -61,6 +49,30 @@ export default function AboutPage() {
       ],
       icon: "🚀",
     },
+    {
+      id: 5,
+      type: "internship",
+      title: "Full-Stack Developer Intern",
+      company: "Saiteja Infotech Private Limited",
+      period: "August 2026 - September 2026",
+      duration: "Completed",
+      description:
+        "Rebuilt the company website from WordPress into a React/Vite single-page application with client-side routing and reusable components. Built a Spring Boot and MySQL backend with a validated REST API for quotation requests. Presented sprint reviews to the CEO and management, and handed the repository over to the company's GitHub organization, where the DevOps team deployed it on the existing domain.",
+      skills: ["React", "Vite", "Java", "Spring Boot", "MySQL", "Docker", "REST APIs"],
+      icon: "🌐",
+    },
+    {
+      id: 6,
+      type: "internship",
+      title: "Full-Stack Developer Intern (Mobile)",
+      company: "ANS Oceanverse Technologies Private Limited",
+      period: "September 2026 - Present",
+      duration: "Remote · 6-month internship",
+      description:
+        "Work on OneBuddy, a service app for six merchant and partner categories: restaurants and food, grocery stores, ride captains (auto, car, bike), pharmacy and healthcare providers, home-service professionals, and delivery partners. Built with React Native, Expo Router, TypeScript, and Firebase. Set up the repository's modular folder and routing foundation, trained a 6-member intern cohort on Git workflows, and now work across the front end, back end, and end-to-end testing ahead of production rollout.",
+      skills: ["React Native", "Expo", "TypeScript", "Firebase", "Firestore", "Git Workflows"],
+      icon: "📱",
+    },
   ];
 
   const achievements = [
@@ -69,12 +81,6 @@ export default function AboutPage() {
       description:
         "Independently designed and shipped a production Socket.io messaging system with JWT-authenticated WebSockets, typing indicators, and read receipts.",
       icon: Target,
-    },
-    {
-      title: "Internship Offer Earned",
-      description:
-        "Converted a paid technical assessment into a formal Full-Stack Developer internship offer at Null Classes.",
-      icon: Briefcase,
     },
     {
       title: "Backend Security Mastery",
@@ -101,9 +107,9 @@ export default function AboutPage() {
               code.
             </p>
             <p>
-              What excites me most is <span className="font-semibold">backend problem-solving</span> — 
-              architecting secure, scalable systems and designing efficient APIs that power real applications. 
-              While I'm proficient in frontend development, my true passion lies in building robust, 
+              What excites me most is <span className="font-semibold">backend problem-solving</span> —
+              architecting secure, scalable systems and designing efficient APIs that power real applications.
+              While I'm proficient in frontend development, my true passion lies in building robust,
               production-ready backends that can handle complexity and scale.
             </p>
           </div>
@@ -157,9 +163,8 @@ export default function AboutPage() {
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className={`border-l-4 pl-6 pb-6 ${
-                  index !== experiences.length - 1 ? "border-b border-gray-200" : ""
-                } ${exp.type === "project" ? "border-l-green-600" : "border-l-blue-600"}`}
+                className={`border-l-4 pl-6 pb-6 ${index !== experiences.length - 1 ? "border-b border-gray-200" : ""
+                  } ${exp.type === "project" ? "border-l-green-600" : "border-l-blue-600"}`}
               >
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -202,28 +207,28 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-gray-700">
             <p>
-              HirePath is more than just a final-year project — it's my demonstration of full-stack 
-              mastery and leadership. Starting in March 2026, I architected a complete MERN job portal 
-              from scratch, leading a 3-person team through coding, system design, and deployment — then 
+              HirePath is more than just a final-year project — it's my demonstration of full-stack
+              mastery and leadership. Starting in March 2026, I architected a complete MERN job portal
+              from scratch, leading a 3-person team through coding, system design, and deployment — then
               went on to independently design and ship a real-time messaging system (v2) using Socket.io.
             </p>
 
             <div className="bg-white rounded-lg p-6 mt-4">
               <p className="font-semibold text-gray-900 mb-3">Key Challenges Overcome:</p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">Backend Security:</span> Implementing JWT authentication, 
-                role-based access control (Student/Employer), protected APIs, and secure file uploads with Cloudinary. 
+                <span className="font-semibold">Backend Security:</span> Implementing JWT authentication,
+                role-based access control (Student/Employer), protected APIs, and secure file uploads with Cloudinary.
                 These real-world security challenges taught me how to build applications that protect user data.
               </p>
               <p className="text-gray-700 mb-4">
-                <span className="font-semibold">System Architecture:</span> Designing scalable APIs, implementing 
-                pagination, filtering, search functionality, and cron jobs for automated job closing. This deepened my 
+                <span className="font-semibold">System Architecture:</span> Designing scalable APIs, implementing
+                pagination, filtering, search functionality, and cron jobs for automated job closing. This deepened my
                 understanding of production-grade system design.
               </p>
               <p className="text-gray-700">
-                <span className="font-semibold">Real-Time Systems:</span> Building a JWT-authenticated Socket.io 
-                messaging layer from scratch — including live delivery, typing indicators, and read receipts — and 
-                debugging genuinely tricky production issues along the way (WebSocket auth payload mismatches, 
+                <span className="font-semibold">Real-Time Systems:</span> Building a JWT-authenticated Socket.io
+                messaging layer from scratch — including live delivery, typing indicators, and read receipts — and
+                debugging genuinely tricky production issues along the way (WebSocket auth payload mismatches,
                 MongoDB ObjectId comparison bugs, deployment configuration errors).
               </p>
             </div>
@@ -231,9 +236,9 @@ export default function AboutPage() {
             <div className="bg-white rounded-lg p-6 mt-4">
               <p className="font-semibold text-gray-900 mb-3">My Role & Impact:</p>
               <ul className="space-y-2 text-gray-700">
-                <li>✓ <span className="font-semibold">Lead Full Stack Developer:</span> Architected the entire system</li>
+                <li>✓ <span className="font-semibold">Full-Stack Developer Lead:</span> Architected and built ~95% of the system; owned backend and integrations, assigned and reviewed team tasks</li>
                 <li>✓ <span className="font-semibold">Backend Specialist:</span> Developed 50+ REST API endpoints</li>
-                <li>✓ <span className="font-semibold">Team Leader:</span> Led a 3-person team, mentoring 2 teammates in frontend UI work</li>
+                <li>✓ <span className="font-semibold">Team Leader:</span> Led a 3-person team, mentoring teammates in feature branching, GitHub workflows, and frontend UI work</li>
                 <li>✓ <span className="font-semibold">DevOps Engineer:</span> Deployed to Vercel (frontend) & Render (backend)</li>
                 <li>✓ <span className="font-semibold">Documentation:</span> Maintained comprehensive code documentation</li>
                 <li>✓ <span className="font-semibold">Issue Management:</span> Assigned and tracked team tasks</li>
@@ -325,16 +330,15 @@ export default function AboutPage() {
           <div className="space-y-4 text-lg">
             <p>
               <span className="font-bold">🎯 Problem Solver:</span> {" "}
-              I'm building my algorithmic foundations in C++ (STL, core DSA) to strengthen my 
-              problem-solving skills for technical interviews.
+              I plan to build my DSA fundamentals in JavaScript and learn system design (high-level and low-level) as I progress.
             </p>
             <p>
-              <span className="font-bold">👥 Team Leader:</span> I don't just code — I mentor, architect, and 
-              inspire. I led a 3-person team through HirePath's development and shipped production code, 
+              <span className="font-bold">👥 Team Leader:</span> I don't just code — I mentor, architect, and
+              inspire. I led a 3-person team through HirePath's development and shipped production code,
               including a real-time messaging system built independently after the initial team build.
             </p>
             <p>
-              <span className="font-bold">🔒 Security-Conscious:</span> I understand the importance of secure, 
+              <span className="font-bold">🔒 Security-Conscious:</span> I understand the importance of secure,
               scalable backend systems. I've implemented real-world security patterns (JWT, RBAC, encrypted APIs).
             </p>
             <p>
@@ -353,13 +357,12 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-gray-700 text-lg">
             <p>
-              Right now, I'm focused on <span className="font-semibold">securing my first internship or junior 
-              developer role</span> to apply my skills in a professional environment, while continuing to build 
-              out HirePath's remaining feature backlog (employer profiles, job management, forgot-password flow) 
-              as an ongoing hobby project.
+              Right now, I'm a <span className="font-semibold">Full-Stack Developer Intern (Mobile)</span> at ANS Oceanverse Technologies Private Limited,
+              working on OneBuddy, a six-category service app nearing production. I'm also continuing HirePath's
+              feature backlog (employer profiles, job management, forgot-password flow) as an ongoing project.
             </p>
             <p>
-              My vision is to become a <span className="font-semibold">senior full-stack engineer</span> who can 
+              My vision is to become a <span className="font-semibold">senior full-stack engineer</span> who can
               architect scalable systems, lead technical teams, and solve complex real-world problems.
             </p>
           </div>
@@ -369,8 +372,8 @@ export default function AboutPage() {
         <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Let's Build Something Great</h2>
           <p className="text-xl text-blue-100 mb-8">
-            I'm actively looking for internship and junior developer roles. If you think I'd be a great fit for 
-            your team, let's talk!
+            I'm open to full-stack and mobile developer roles where I can keep owning features end to end.
+            If you think I'd be a good fit for your team, let's talk!
           </p>
           <Link
             href="/contact"

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Akram Guroo",
-  title: "Full Stack Developer",
-  description: "Building scalable web applications with React, Node.js, and modern technologies.",
+  title: "Full-Stack Developer (Mobile & Web)",
+  description: "Building scalable web and mobile products: React, Node.js, React Native, and Java Spring Boot.",
 
   graduation: {
     month: "July",
@@ -11,7 +11,7 @@ export const siteConfig = {
 
   leetcode: {
     target: 100,
-    note: "Building algorithmic foundations in C++ (STL, core DSA)"
+    note: "Planning DSA practice in JavaScript and learning system design next"
   },
 
   about: {

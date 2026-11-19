@@ -10,8 +10,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-              Full Stack Developer
+              Full-Stack Developer
             </h1>
+            <p className="text-lg text-blue-700 font-semibold">
+              Mobile & Web · MERN · React Native · Java Spring Boot
+            </p>
             <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
               {siteConfig.description}
             </p>
@@ -43,31 +46,31 @@ export default function Home() {
 
           <div className="space-y-6 text-lg text-gray-700">
             <p>
-              I completed my BTech at <span className="font-semibold">{siteConfig.about.college}</span> ({siteConfig.about.university} - NIRF Rank {siteConfig.about.nifrRank}, NAAC {siteConfig.about.naacGrade} accredited) in {siteConfig.graduation.month} {siteConfig.graduation.year}. 
+              I completed my BTech at <span className="font-semibold">{siteConfig.about.college}</span> ({siteConfig.about.university} - NIRF Rank {siteConfig.about.nifrRank}, NAAC {siteConfig.about.naacGrade} accredited) in {siteConfig.graduation.month} {siteConfig.graduation.year}.
               Over the past year, I've been working on full-stack projects that solve real business problems, from job portals to AI-powered applications.
             </p>
 
             <p>
-              What excites me most is <span className="font-semibold">backend problem-solving</span> — architecting scalable systems, designing efficient APIs, and handling complex business logic. 
+              What excites me most is <span className="font-semibold">backend problem-solving</span> — architecting scalable systems, designing efficient APIs, and handling complex business logic.
               While I'm proficient in frontend development, my passion lies in building robust, production-ready backends.
             </p>
 
             <p>
-              I lead by example. I led and mentored a <span className="font-semibold">3-person team</span> on the HirePath project, guiding two teammates through the development process, 
-              architecting the full-stack solution, and handling core backend work. We followed an <span className="font-semibold">MVP-iterative model</span>, shipping features incrementally and improving based on feedback. 
+              I lead by example. I led and mentored a <span className="font-semibold">3-person team</span> on the HirePath project, guiding two teammates through the development process,
+              architecting the full-stack solution, and handling core backend work. We followed an <span className="font-semibold">MVP-iterative model</span>, shipping features incrementally and improving based on feedback.
               I later independently designed and shipped HirePath's real-time messaging system (v2).
             </p>
 
             <p>
-              I'm building my algorithmic foundations in C++ (targeting {siteConfig.leetcode.target}+ problems on LeetCode) to strengthen my problem-solving skills and prepare for technical interviews. 
-              My goal is to secure a junior developer role or internship, with the vision to grow into a senior full-stack engineer.
+              I plan to build my DSA fundamentals in JavaScript and learn system design as I progress, alongside my production work.
+              I'm currently a Full-Stack Developer Intern (Mobile) at ANS Oceanverse Technologies Private Limited, working on OneBuddy, with the goal of growing into a senior full-stack engineer.
             </p>
           </div>
 
           {/* Education Badge */}
           <div className="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6">
             <p className="text-gray-700">
-              <span className="font-semibold">Education:</span> BTech Computer Science & Engineering, {siteConfig.about.college}, 
+              <span className="font-semibold">Education:</span> BTech Computer Science & Engineering, {siteConfig.about.college},
               {siteConfig.about.university} (NIRF Rank {siteConfig.about.nifrRank}, NAAC Grade {siteConfig.about.naacGrade}). {siteConfig.graduation.status}: {siteConfig.graduation.month} {siteConfig.graduation.year} (degree conferral pending).
             </p>
           </div>
@@ -108,9 +111,8 @@ export default function Home() {
             {projects.filter(p => p.featured).map((project, index) => (
               <div
                 key={project.id}
-                className={`border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow ${
-                  index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                }`}
+                className={`border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow ${index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                  }`}
               >
                 <div className="p-8">
                   <div className="mb-6">
@@ -139,8 +141,8 @@ export default function Home() {
                   {project.metrics && (
                     <div className="bg-blue-50 rounded-lg p-4 mb-6">
                       <p className="text-sm text-gray-700">
-                        <span className="font-semibold">{project.metrics.features}</span> features • 
-                        <span className="font-semibold ml-2">{project.metrics.accessibility}</span> accessibility score • 
+                        <span className="font-semibold">{project.metrics.features}</span> features •
+                        <span className="font-semibold ml-2">{project.metrics.accessibility}</span> accessibility score •
                         <span className="font-semibold ml-2">{project.metrics.lines_of_code}</span> lines of code
                       </p>
                     </div>
@@ -204,7 +206,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-4xl font-bold text-white">Ready to Work Together?</h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            I'm actively looking for internship and junior developer roles. Let's build something amazing together.
+            I'm open to full-stack and mobile developer roles. Let's build something amazing together.
           </p>
           <Link
             href="/contact"
