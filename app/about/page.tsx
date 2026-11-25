@@ -12,7 +12,7 @@ export default function AboutPage() {
       title: "Frontend Fundamentals",
       company: "SuperSimpleDev",
       period: "December 2024 - April 2025",
-      duration: "~2 months",
+      duration: "~4 months",
       description:
         "Mastered the fundamentals of web development with HTML5, CSS3, and JavaScript. Built 5 practical projects including YouTube Clone, Calculator, Rock Paper Scissors Game, To-Do List, and Amazon Clone.",
       skills: ["HTML5", "CSS3", "JavaScript", "Git", "GitHub"],
@@ -252,7 +252,7 @@ export default function AboutPage() {
             Achievements & Recognition
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement) => {
               const IconComponent = achievement.icon;
               return (
