@@ -23,30 +23,12 @@ export const siteConfig = {
 };
 
 export const techStack = [
-  {
-    category: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "C", "C++", "Java"]
-  },
-  {
-    category: "Frontend",
-    skills: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS", "HTML5", "CSS3"]
-  },
-  {
-    category: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "Socket.io (WebSockets)", "JWT Authentication"]
-  },
-  {
-    category: "Database",
-    skills: ["MongoDB", "Mongoose"]
-  },
-  {
-    category: "Tools & DevOps",
-    skills: ["Git", "GitHub", "Vercel", "Render", "Cloudinary", "Jest"]
-  },
-  {
-    category: "Expertise",
-    skills: ["Full Stack Development", "Real-Time Systems", "Team Leadership"]
-  },
+  { category: "Languages", skills: ["JavaScript", "TypeScript", "C", "C++", "Java", "Python"] },
+  { category: "Frontend & Mobile", skills: ["React", "React Native", "Expo", "Next.js", "Redux Toolkit", "Tailwind CSS", "HTML5", "CSS3"] },
+  { category: "Backend", skills: ["Node.js", "Express.js", "Spring Boot", "REST APIs", "Socket.io (WebSockets)", "JWT Authentication", "Firebase"] },
+  { category: "Database", skills: ["MongoDB", "Mongoose", "MySQL", "PostgreSQL", "Firestore"] },
+  { category: "Tools & DevOps", skills: ["Git", "GitHub", "Docker", "Vercel", "Render", "Cloudinary", "Jest", "Postman", "Thunder Client", "Swagger", "Claude"] },
+  { category: "Expertise", skills: ["Full Stack Development", "Mobile Development", "Real-Time Systems", "Team Leadership"] },
 ];
 
 export const projects = [

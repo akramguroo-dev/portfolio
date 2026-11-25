@@ -9,11 +9,13 @@ export default function Home() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6">
+            <img src="/profile.png" alt="Akram Guroo"
+              className="w-40 h-40 mx-auto rounded-full object-cover object-[50%_25%] border-4 border-white shadow-lg" />
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
               Full-Stack Developer
             </h1>
             <p className="text-lg text-blue-700 font-semibold">
-              Mobile & Web · MERN · React Native · Java Spring Boot
+              Mobile & Web · MERN · React Native · Expo · Firebase
             </p>
             <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
               {siteConfig.description}

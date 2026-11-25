@@ -19,8 +19,8 @@ export default function RootLayout({
 
         <main className="flex-1">{children}</main>
 
-        <footer className="bg-gray-900 text-white mt-12 py-8">
-          {/* footer content */}
+        <footer className="bg-white text-gray-500 border-t border-gray-200 py-6 text-center text-sm">
+          © {new Date().getFullYear()} Akram Guroo. All rights reserved.
         </footer>
       </body>
     </html>

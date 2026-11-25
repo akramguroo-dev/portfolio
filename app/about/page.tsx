@@ -11,7 +11,7 @@ export default function AboutPage() {
       type: "course",
       title: "Frontend Fundamentals",
       company: "SuperSimpleDev",
-      period: "December 2024 - January 2025",
+      period: "December 2024 - April 2025",
       duration: "~2 months",
       description:
         "Mastered the fundamentals of web development with HTML5, CSS3, and JavaScript. Built 5 practical projects including YouTube Clone, Calculator, Rock Paper Scissors Game, To-Do List, and Amazon Clone.",
@@ -76,18 +76,14 @@ export default function AboutPage() {
   ];
 
   const achievements = [
-    {
-      title: "Real-Time Messaging System",
-      description:
-        "Independently designed and shipped a production Socket.io messaging system with JWT-authenticated WebSockets, typing indicators, and read receipts.",
-      icon: Target,
-    },
-    {
-      title: "Backend Security Mastery",
-      description:
-        "Implemented JWT authentication, role-based access control, and secure, production-hardened APIs.",
-      icon: Award,
-    },
+    { title: "HirePath v1 & v2 Live", icon: Target,
+      description: "Led a 3-person team to ship a production MERN job portal, then independently added a real-time Socket.io messaging system." },
+    { title: "Company Website Delivered", icon: Briefcase,
+      description: "Rebuilt a company website from WordPress into a React/Vite app with a Spring Boot backend. The repo was handed over and deployed by the company's DevOps team." },
+    { title: "Interns Mentored", icon: Award,
+      description: "Trained a 6-member intern cohort at ANS Oceanverse on Git workflows, feature branching, and PR reviews." },
+    { title: "Backend Security", icon: Award,
+      description: "Implemented JWT authentication, role-based access control, rate limiting, and input validation across production APIs." },
   ];
 
   return (
@@ -95,9 +91,11 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         {/* Hero Section */}
         <section>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About Me
-          </h1>
+          <div className="flex items-center gap-6 mb-6">
+            <img src="/profile.png" alt="Akram Guroo"
+              className="w-28 h-28 rounded-full object-cover object-[50%_25%] border-4 border-white shadow-lg flex-shrink-0" />
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">About Me</h1>
+          </div>
           <div className="space-y-4 text-lg text-gray-700">
             <p>
               I'm a full-stack developer who recently completed my degree at{" "}
@@ -238,7 +236,7 @@ export default function AboutPage() {
               <ul className="space-y-2 text-gray-700">
                 <li>✓ <span className="font-semibold">Full-Stack Developer Lead:</span> Architected and built ~95% of the system; owned backend and integrations, assigned and reviewed team tasks</li>
                 <li>✓ <span className="font-semibold">Backend Specialist:</span> Developed 50+ REST API endpoints</li>
-                <li>✓ <span className="font-semibold">Team Leader:</span> Led a 3-person team, mentoring teammates in feature branching, GitHub workflows, and frontend UI work</li>
+                <li>✓ <span className="font-semibold">Team Leader:</span> Led a 3-person team, mentored a 6-member intern cohort on Git workflows, and took full ownership of a company website rebuild</li>
                 <li>✓ <span className="font-semibold">DevOps Engineer:</span> Deployed to Vercel (frontend) & Render (backend)</li>
                 <li>✓ <span className="font-semibold">Documentation:</span> Maintained comprehensive code documentation</li>
                 <li>✓ <span className="font-semibold">Issue Management:</span> Assigned and tracked team tasks</li>
@@ -330,12 +328,10 @@ export default function AboutPage() {
           <div className="space-y-4 text-lg">
             <p>
               <span className="font-bold">🎯 Problem Solver:</span> {" "}
-              I plan to build my DSA fundamentals in JavaScript and learn system design (high-level and low-level) as I progress.
+              I'm building DSA fundamentals in JavaScript and learning system design step by step, alongside my mobile product work.
             </p>
             <p>
-              <span className="font-bold">👥 Team Leader:</span> I don't just code — I mentor, architect, and
-              inspire. I led a 3-person team through HirePath's development and shipped production code,
-              including a real-time messaging system built independently after the initial team build.
+              <span className="font-bold">👥 Team Leader:</span> I lead by example. I took full ownership of a company website rebuild, presented it to the CEO, and mentored a 6-member intern cohort on Git workflows and collaboration.
             </p>
             <p>
               <span className="font-bold">🔒 Security-Conscious:</span> I understand the importance of secure,
@@ -357,9 +353,7 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-gray-700 text-lg">
             <p>
-              Right now, I'm a <span className="font-semibold">Full-Stack Developer Intern (Mobile)</span> at ANS Oceanverse Technologies Private Limited,
-              working on OneBuddy, a six-category service app nearing production. I'm also continuing HirePath's
-              feature backlog (employer profiles, job management, forgot-password flow) as an ongoing project.
+              Right now, I'm focused on mastering <span className="font-semibold">mobile development</span> with React Native, Expo, TypeScript, and Firebase through my work at ANS Oceanverse on OneBuddy. I'm also learning <span className="font-semibold">system design from scratch</span>, practicing <span className="font-semibold">DSA in JavaScript</span>, and building my <span className="font-semibold">Python</span> skills.
             </p>
             <p>
               My vision is to become a <span className="font-semibold">senior full-stack engineer</span> who can
